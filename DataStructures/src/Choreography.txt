@@ -1,0 +1,107 @@
+Chapter 1
+	1) Create package FlightApplication - this is the heart of the Object Oriented Programming and Class Hierarchies
+		We will use this application throughout the Course.
+                Great demonstration of 4 pillars of object oriented languages.
+	2) Create BaseFlight.java
+	3) Make BaseFlight abstract after discussing the concept of abstracting out the common variables and methods for these
+		types of Flights:
+		
+		a) Commercial Flight (**Note: Arraylist inside commercialFlight class)
+			Introduces the commercialFlightID, passengers, flightNo, Destination and Departure and crew arrayList
+			Also: FuelComparators and overrides of the compareTo method and PassengerComparators
+			
+		b) Military Flight 
+			Introduces mission, inFlightRefuel, weapons, sensors and crew arrayLists.
+			Also: FuelComparators and overrides of the compareTo method.
+			
+		c) Private Flight 
+			Introduces the flightPlan, departure, arrival and passengers
+
+		d) Helicopter Flight
+			Introduces the overriding of changeSpeed to allow helicopter to fly backwards.
+
+SHARED FILES located:
+        G:\\ChattState\\Courses\\SharedFiles\\IntegerLists\\1Kints.txt
+
+
+Chapter 2 Create Package CHArrayList
+    For CHArrayList:
+        1) Create CHArrayList.java
+        2) Create and Lecture Program.java
+        3) Create ArrayListAviation.java         
+        4) To Prep for Program02.java:
+            1) Create accountPinAmount package
+            2) Add AccountPinAmount.java
+
+Prep for Linked Lists
+
+Linked Lists:
+    CHLinkedList Package
+        1) SingleLinkedList.java  - basic Generic LinkedList
+        2) OrderedLinkedList.java - basic LinkedList that is sorted
+        3) SortedSingleLinkedList.java  - similar to orderedLinkedList but generic
+
+
+    CHDoublyLinkedList Package
+        1) DoublyLinkedList.java  - Generic double linked list
+        2) UsingFile.java          - Generic double linked list routines using a shared integer file.
+
+
+Chapter 3
+JUnit Testing
+	1) Use Package Lecture Testing to display JUnit 
+		Create MyClass.java and MyInput.java
+	2) Use Test Package LectureTesting to hold the JUnit tests
+		MyClassTest is the primary test class.
+		
+
+Chapter 4
+Stacks and Queues
+	1) Create package CHStack
+	2) Create interface StackInt
+	3) Create LinkedStack class and LinkedStackTest classes (includes FlightApplication Stack)
+	
+	4) Create package PalindromeFinder
+            Implementation of a Deque
+		Create PalindromeFinder.java
+	5) Create test package PalindromeFinder
+		Create PalindromeFinderTest.java 
+		
+	6) Create CHQueue Package
+	7)	Create LinkedQueue.java
+	8)	Create LinkedQueueTest.java;	
+	9) 	Create PriorityQueueTest.java
+
+
+
+Fibonacci Package
+        Demonstrates memoization
+	
+Trees:
+    Create CHTree Package
+	1) Create CHBinaryTree
+	2) Create BinaryTree.java
+		a) Show method remove after first part of lecture.
+	3) Create BinaryTreeTest.java
+
+    Create CHBST package
+        1) Create ISearchTree.java interface
+        2) Create BSTGeneric.java
+        3) Create BSTGenericTest.java
+        ( BST.java and BSTTest.java are not Generic 
+            lecture if time is available )
+
+	
+Hash Table Lecture
+    1) See HashTableLecture package
+    2) Use the classes as lecture for beginning HashTable logic
+    3) 
+
+Sorting:
+    1) Package shows the implementation of Generic Sort Routines.
+    2) Use LargeSortTest as Final Demonstration program.  Introduce the 
+        classes in same order as listed in LargeSortTest.java.         
+    2) Ignore Array.java ArrayTest.java and IterativeQuickSort.java for now.
+        1) TODO: fix IterativeQuickSort to accomodate Generics.  The current QuickSort routine is recursive and runs out of memory quickly.
+	
+			
