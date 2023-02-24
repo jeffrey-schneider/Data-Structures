@@ -6,7 +6,7 @@
  */
 package CSHashMap;
 
-import CHComparableVsComparator.Student;
+import CSComparableVsComparator.Student;
 import java.util.ArrayList;
 
 /**
@@ -25,22 +25,22 @@ public class HashMapTest {
         System.out.println("Is openHash empty? " + openHash.isEmpty());
         openHash.put(0, "Schneider");    
         openHash.printAll();
-        openHash.put(1, "Cox");
+        openHash.put(1, "Bass");
         openHash.printAll();
-        openHash.put(2, "Davies");
+        openHash.put(2, "Graham");
         openHash.printAll();
-        openHash.put(3, "Lee");
+        openHash.put(3, "Massey");
         openHash.printAll();
-        openHash.put(3, "Someone Else");
+        openHash.put(3, "Krueger");
         openHash.printAll();
-        openHash.put(4, "Reeves");
+        openHash.put(4, "Rollins");
         openHash.printAll();
-        openHash.put(3, "Not Lee");
+        openHash.put(3, "Spence");
        
         openHash.printAll();
-        openHash.put(5, "Russell");
+        openHash.put(5, "Richmond");
         openHash.printAll();
-        openHash.put(6, "Clause");
+        openHash.put(6, "Knight");
         openHash.printAll();
         System.out.println("get(3)" + openHash.get(3));
         openHash.put(3, "Changed");
@@ -48,18 +48,17 @@ public class HashMapTest {
         
         openHash.printAll();
 
-        //HashMapChainDepricated<Integer, String> chain = new HashMapChainDepricated<>();
         HashMapChain<Integer, String> chain = new HashMapChain<>();
-        chain.put(1, "Cox");
-        chain.put(1, "Cox");
+        chain.put(1, "Bass");
+        chain.put(1, "Bass");
         System.out.println("\n\nChaining ");
-        chain.put(1, "Cox");
-        chain.put(2, "Davies");
+        chain.put(1, "Graham");
+        chain.put(2, "Massey");
         chain.put(0, "Schneider");
-        chain.put(3, "Lee");
-        chain.put(4, "Reeves");
-        chain.put(5, "Russell");
-        chain.put(6, "Clause");
+        chain.put(3, "Krueger");
+        chain.put(4, "Rollins");
+        chain.put(5, "Richmond");
+        chain.put(6, "Knight");
         System.out.println("Remove 0");
         chain.remove(0);
         System.out.println("Chain size: " + chain.size());
@@ -67,8 +66,8 @@ public class HashMapTest {
             System.out.println(chain.get(i));
         }
         
-        HashMapOpen<Integer, Student> HashStudent = new HashMapOpen<>();
-        //HashMapChain<Integer,Student> HashStudent = new HashMapChain<>();
+        //HashMapOpen<Integer, Student> HashStudent = new HashMapOpen<>();
+        HashMapChain<Integer,Student> HashStudent = new HashMapChain<>();
         ArrayList<Student> studentList = new ArrayList<>();
         
         studentList.add(new Student(3, "Schneider", 59));                

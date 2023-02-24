@@ -6,8 +6,11 @@
 package CSStack;
 
 
-import CHFlightApplication.CommercialFlight;
 import java.util.ArrayList;             //Needed for popAll().
+import java.util.Iterator;
+import java.util.List;
+
+import CSFlightApplication.CommercialFlight;
 
 /**
  *
@@ -24,8 +27,8 @@ public class LinkedStackTest {
 
         
         System.out.println("Before isEmpty()? "+ stack.isEmpty());
-        System.out.println("Let's popAll()");        
-        System.out.println(stack.popAll());
+        System.out.println("Let's popAll02()");        
+        System.out.println(stack.popAll02());
         System.out.println("After isEmpty()? "+ stack.isEmpty());
         
         
@@ -56,6 +59,17 @@ public class LinkedStackTest {
         while (!flights.isEmpty()) {
             System.out.println(flights.pop());
         }
+        
+        LinkedStack<Integer> theStack = new LinkedStack<>();
+        for (int i = 0; i < 10; i++) {
+			theStack.push(i);			
+		}
+
+        System.out.println("Test of popAll()");
+        List<Integer> theList = theStack.popAll();
+        for (Integer integer : theList) {
+			System.out.println(integer);
+		}
 
     }
 

@@ -11,9 +11,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
 import java.util.Arrays;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+//import java.util.logging.Level;
+//import java.util.logging.Logger;
 
 /**
  *
@@ -22,6 +24,7 @@ import java.util.logging.Logger;
 public class LargeSortTest<T> {
 
     public static boolean GENERIC_ITERATIVE_QUICKSORT_DEBUG_MODE = true;
+    
 
     public static void main(String[] args) throws FileNotFoundException {
         //1Kints, 2Kints, 4Kints, 8Kints, 16Kints, 32Kints, 1Mints
@@ -75,12 +78,13 @@ public class LargeSortTest<T> {
                 try {
                     masterArray[lineCounter] = Integer.parseInt(st.replaceAll("\\s", ""), 10); //replaceAll removes the spaces from the file                    
                 } catch (Exception ex) {
-                    Logger.getLogger(LargeSortTest.class.getName()).log(Level.SEVERE, null, ex);
+                    //Logger.getLogger(LargeSortTest.class.getName()).log(Level.SEVERE, null, ex);
+                	//LOGGER.info(LargeSortTest.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 lineCounter++;
             }
         } catch (IOException ex) {
-            Logger.getLogger(LargeSortTest.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(LargeSortTest.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.println("Lines: " + lineCounter);
 

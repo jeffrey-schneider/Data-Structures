@@ -17,7 +17,7 @@
  */
 package CSHashMap;
 
-import CHComparableVsComparator.Student;
+import CSComparableVsComparator.Student;
 import java.util.ArrayList;
 
 /**
@@ -27,8 +27,8 @@ import java.util.ArrayList;
 public class BigHashMapTest {
 
     public static void main(String[] args) {
-        HashMapOpen<Integer, Student> HashStudent = new HashMapOpen<>();
-        //HashMapChain<Integer, Student> HashStudent = new HashMapChain<>();
+        //HashMapOpen<Integer, Student> HashStudent = new HashMapOpen<>();
+        HashMapChain<Integer, Student> HashStudent = new HashMapChain<>();
         
         ArrayList<Student> studentList = createStudentList();
 

@@ -15,7 +15,7 @@ public class IteratorTest {
 
     public static void main(String[] args) {
         //CReate an array list.
-        ArrayList al = new ArrayList();
+        ArrayList<String> al = new ArrayList<String>();
 
         //add elements
         al.add("C");
@@ -27,7 +27,7 @@ public class IteratorTest {
 
         //Use iterator to display contents of al
         System.out.print("Original contents of al: ");
-        Iterator itr = al.iterator();
+        Iterator<String> itr = al.iterator();
 
         while (itr.hasNext()) {
             Object element = itr.next();
@@ -36,7 +36,7 @@ public class IteratorTest {
         System.out.println("");
 
         //Modify objects using iterator
-        ListIterator litr = al.listIterator();
+        ListIterator<String> litr = al.listIterator();
 
         while (litr.hasNext()) {
             Object element = litr.next();

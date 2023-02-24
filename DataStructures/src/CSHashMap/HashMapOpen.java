@@ -16,7 +16,7 @@ import java.util.Iterator;
 public class HashMapOpen<K,V> implements HashMap<K,V> {
     //Data fields
     private Entry<K,V>[] table;
-    private static final int START_CAPACITY = 101; //Start capacity low to show many collisions for lecture.
+    private static final int START_CAPACITY = 1; //Start capacity low to show many collisions for lecture.
     private double LOAD_THRESHOLD = 0.75;
     private int numKeys;
     private int numDeletes;

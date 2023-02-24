@@ -11,8 +11,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+//import java.util.logging.Level;
+//import java.util.logging.Logger;
 
     
 
@@ -75,12 +75,12 @@ public class LargeBSTTest {
                 try {                    
                     masterArray[lineCounter] = Integer.parseInt(st.replaceAll("\\s", ""), 10 );  //replaceAll removes the spaces from the file
                 } catch (Exception ex) {
-                    Logger.getLogger(LargeBSTTest.class.getName()).log(Level.SEVERE, null, ex);
+                    //Logger.getLogger(LargeBSTTest.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 lineCounter++;
             }
         } catch (IOException ex) {
-            Logger.getLogger(LargeBSTTest.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(LargeBSTTest.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.println("Lines: " + lineCounter);
         

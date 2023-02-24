@@ -1,7 +1,7 @@
 package CSQueue;
 
 //import FlightApplication.CommercialFlight;
-import CHFlightApplication.CommercialFlight;
+import CSFlightApplication.CommercialFlight;
 import java.util.ArrayList;
 
 /**

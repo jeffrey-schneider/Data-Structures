@@ -6,9 +6,9 @@
 package CSQueue;
 
 //import static FlightApplication.BaseFlight.FuelComparator;
-import CHFlightApplication.AltitudeComparator;
-import CHFlightApplication.CommercialFlight;
-import CHFlightApplication.FuelComparator;
+import CSFlightApplication.AltitudeComparator;
+import CSFlightApplication.CommercialFlight;
+import CSFlightApplication.FuelComparator;
 //import static FlightApplication.CommercialFlight.PassengerComparator;
 import java.util.Comparator;
 import java.util.PriorityQueue;
