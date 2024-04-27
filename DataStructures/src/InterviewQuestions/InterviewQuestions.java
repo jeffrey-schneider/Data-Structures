@@ -55,7 +55,8 @@ public class InterviewQuestions {
 
     private static BigInteger chessBoard(int n) {
         BigInteger retVal = BigInteger.ZERO;
-        BigInteger buffer = BigInteger.TWO;
+        //BigInteger buffer = BigInteger.TWO;
+        BigInteger buffer = BigInteger.valueOf(2L);
         //int retVal = 0;
         for (int counter = 0; counter <= n; counter++) {
             retVal = retVal.add(buffer.pow(counter));
