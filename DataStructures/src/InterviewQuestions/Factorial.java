@@ -36,10 +36,11 @@ public class Factorial {
     }
 
     private static BigInteger chessBoard(int n) {
-        BigInteger retVal = BigInteger.ONE;     
+        BigInteger retVal = BigInteger.ONE;
+        BigInteger BIG_TWO = BigInteger.valueOf(2L);
         
         for (int counter = 2; counter <= n; counter++) {
-            retVal = retVal.add(retVal.modPow(BigInteger.TWO, BigInteger.valueOf(counter)));
+            retVal = retVal.add(retVal.modPow(BIG_TWO, BigInteger.valueOf(counter)));
         }
         return retVal;
     }

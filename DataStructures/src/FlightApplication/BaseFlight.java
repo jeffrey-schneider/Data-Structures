@@ -64,7 +64,7 @@ public abstract class BaseFlight implements Comparable<BaseFlight> {
         return speed;
     }
 
-    public void setSpeed(int speed) {
+    public final void setSpeed(int speed) {
         this.speed = speed;
     }
 
@@ -104,7 +104,7 @@ public abstract class BaseFlight implements Comparable<BaseFlight> {
         return course;
     }
 
-    public void setCourse(int course) {
+    public final void setCourse(int course) {
         if (course > 0 && course <= 360){
             this.course = course;            
         }else if (course < 0) {
@@ -114,7 +114,7 @@ public abstract class BaseFlight implements Comparable<BaseFlight> {
         }
     }
 
-    public void changeCourse(int courseChange){
+    public final void changeCourse(int courseChange){
 //        int courseBuffer = this.course;
         if(course > 0 || course <=360){
             this.course = courseChange;
@@ -131,19 +131,31 @@ public abstract class BaseFlight implements Comparable<BaseFlight> {
         return altitude;
     }
 
-    public void setAltitude(int altitude) {
+    public final void setAltitude(int altitude) {
         this.altitude = altitude;
     }
 
-     public void changeSpeed(int speedChange){
-        //aircraft cannot fly backward; disallow negative numbers
-        int speedBuffer = speed;
-        this.speed += speedChange;
-        if(speed < 0){
-            speed = speedBuffer;
+    /**
+     * For airplanes, validSpeed is > 0
+     * Override for helicopters
+     * @param speed
+     * @return 
+     */
+    protected int validSpeed(int speed){
+        if(speed > 0){
+            return speed;
         }
+        return Math.abs(speed);
     }
-    public void changeAltitude(int newAltitude){
+    
+    public final void changeSpeed(int validSpeed){
+        //aircraft cannot fly backward; disallow negative numbers        
+        this.speed += validSpeed;        
+    }
+    
+    
+   
+    public final void changeAltitude(int newAltitude){
         //aircraft cannot fly at negative altitudes
         int altBuffer = newAltitude;
         if(altBuffer > 100)

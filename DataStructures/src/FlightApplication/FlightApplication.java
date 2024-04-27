@@ -83,6 +83,7 @@ public class FlightApplication {
                 4000, 1000, 33.6, -133.6, "A6-D", 1000, 180);
   //      System.out.println("Military: " + pizza2.toString());
         
+        
         FuelComparator fuelComparator = new FuelComparator();
        // Collections.sort(commList,fuelComparator);        
         
@@ -105,6 +106,7 @@ public class FlightApplication {
         
         milList.add(new MilitaryFlight("Bombing", true, null, null, crewList, 0, 0, 0, 0, "B1B bomber", 12000, 45));
         milList.add(new MilitaryFlight("Defoliating", true,null,null, crewList, 1,2,3,4,"Ducky bird", 125000,45));
+        
         
         System.out.println("Enhanced For Loop, Commercial"); 
        for(CommercialFlight item: commList){
@@ -130,10 +132,29 @@ public class FlightApplication {
         
         System.out.println("\n\nSort on passengers: ");
 //        Collections.sort(commList,CommercialFlight.PassengerComparator);
-         iter = commList.iterator();
+        iter = commList.iterator();
         while (iter.hasNext()) {
-            System.out.println(iter.next());
+            System.out.println(iter.next());            
         }
         
+        for (CommercialFlight item : commList) {
+            item.setSpeed(-400);
+        }
+        System.out.println("After speed setting");
+        iter = commList.iterator();
+        while (iter.hasNext()) {
+            System.out.println(iter.next());            
+        }
+        
+        System.out.println("After helicopter speed setting");
+        
+        for (HelicopterFlight item : heliList) {
+            item.setSpeed(-400);
+        }
+        
+        Iterator iterHeli = heliList.iterator();
+        while(iterHeli.hasNext()){
+            System.out.println(iterHeli.next());
+        }
     }
 }

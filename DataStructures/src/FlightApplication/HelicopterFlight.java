@@ -21,10 +21,18 @@ public class HelicopterFlight extends BaseFlight {
         return super.toString(); //To change body of generated methods, choose Tools | Templates.
     }
 
+    
+    /**
+     * Allows negative speeds for reverse flight.
+     * @param speed
+     * @return 
+     */
     @Override
-    public void changeSpeed(int speedChage){
-        this.speed += speedChage;
+    protected int validSpeed(int speed){     
+            return speed;
     }
+    
+    
     
     @Override
     public int compareTo(BaseFlight o) {

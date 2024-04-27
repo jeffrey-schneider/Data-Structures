@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author JCSchneider
- *
- */
-module DataStructures {
-}
