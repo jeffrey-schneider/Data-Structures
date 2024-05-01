@@ -60,11 +60,21 @@ public abstract class BaseFlight {
         return speed;
     }
 
-    public void setSpeed(int speed) {
-        this.speed = speed;
+    
+    public final boolean setSpeed(int speed) {
+        if(isValidSpeed(speed)) {
+        	this.speed = speed;	
+        	return true;
+        }
+        return false;
+    	
     }
 
-    public double getLatitude() {
+    protected boolean isValidSpeed(int speed) {		
+		return speed >= 0;
+	}
+
+	public double getLatitude() {
         return latitude;
     }
 
@@ -118,12 +128,15 @@ public abstract class BaseFlight {
             this.course += 360;             
     }
     
-    public void changeSpeed(int speedChange){
+    
+    public final boolean changeSpeed(int speedChange){
         //aircraft cannot fly backward; disallow negative speed
-        int speedBuffer = speed;
-        this.speed += speedChange;
-        if (speed < 0)
-            speed = speedBuffer;
+        //int speedBuffer = speed;
+        if(isValidSpeed(this.speed + speedChange)) {
+        	this.speed += speedChange;
+        	return true;
+        }        
+        return false;
     }
 
 
@@ -133,9 +146,7 @@ public abstract class BaseFlight {
 
     public void setAltitude(int altitude) {
         this.altitude = altitude;
-    }
-
-    
+    }    
     
     
     public boolean equals(Object obj)
@@ -149,6 +160,11 @@ public abstract class BaseFlight {
             return false;
         }
     }
+
+	public int compareTo(BaseFlight o) {
+		// TODO Auto-generated method stub
+		return this.compareTo(o);
+	}
 }
 
 

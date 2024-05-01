@@ -5,8 +5,8 @@
  */
 package CSArrayList;
 
-import FlightApplication.CommercialFlight;
-import FlightApplication.BaseFlight;
+import CSFlightApplication.CommercialFlight;
+import CSFlightApplication.BaseFlight;
 import java.util.Collections;
 import java.util.Iterator;
 
@@ -17,37 +17,38 @@ import java.util.Iterator;
 public class ArrayListAviation {
     public static void main(String[] args){
         CSArrayList<CommercialFlight> commList = new CSArrayList<CommercialFlight>();
+        
+        CommercialFlight comm1 = new CommercialFlight(25, 251, "AA123", "KORD","KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000);
+        System.out.println(comm1.toString());
         System.out.println("Is empty: " + commList.isEmpty());
         int counter = 0;
         
-        CommercialFlight comm1 = new CommercialFlight(65, "EMC2", "CHA", "DTX", null, 290, 34, 
-                34.0, 125.0, "Boeing737-400", 2750, 25);
-        commList.add(comm1);
+        CommercialFlight comm4 = new CommercialFlight(26, 251, "AA123", "KORD", "KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000);
+        commList.add(comm4);
 
-        commList.add(new CommercialFlight(0, "Flight666", "LAX","CHA", null, 890, 6500, 32.4, -123.0, "Airbus Doomed 320", 234, 180));
+        commList.add(new CommercialFlight(18, 251, "United Express6291", "DFW", "KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000));        
+        commList.add(new CommercialFlight(26, 250, "China Airlines 140", "DFW", "KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000));        
+        commList.add(new CommercialFlight(27, 250, "Purolator123", "DFW", "KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000));        
+        commList.add(new CommercialFlight(28, 250, "Hubbard234", "DFW", "KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000));
+        commList.add(new CommercialFlight(29, 250, "Piedmont", "SLC", "KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000));
+        commList.add(new CommercialFlight(20, 250, "Republic", "SLC", "KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000));
+        commList.add(new CommercialFlight(21, 250, "Alaska Airlines", "SLC", "KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000));
+        commList.add(new CommercialFlight(22, 250, "American234", "SLC", "KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000));
+        commList.add(new CommercialFlight(23, 250, "Delta888", "ATL", "KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000));
+        commList.add(new CommercialFlight(24, 250, "Southern13", "MCO", "KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000));
+        commList.add(new CommercialFlight(25, 250, "North Central1", "IAD", "KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000));
+        commList.add(new CommercialFlight(31, 250, "Northwest Orient888", "ATL", "KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000));
+        commList.add(new CommercialFlight(32, 250, "National345", "DEN", "KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000));
+        commList.add(new CommercialFlight(39, 250, "Braniff887", "IAD", "KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000));
+        commList.add(new CommercialFlight(40, 250, "Easter123", "ATL", "KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000));
+        commList.add(new CommercialFlight(50, 250, "Frontier123", "MCO", "KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000));
+        commList.add(new CommercialFlight(10, 250, "Ozark123", "DEN", "KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000));
+        commList.add(new CommercialFlight(11, 250, "Republic123", "ATL", "KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000));
+        commList.add(new CommercialFlight(12, 250, "Pan Am123", "IAD", "KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000));
         
-        commList.add(new CommercialFlight(25, "616", "CHA", "LAX", null, 230, 550, 
-                34.0, -133.5, "MD88", 2500, 175));      
-        
-        commList.add(new CommercialFlight(250, "616", "CHA", "LAX", null, 230, 550, 
-                34.0, -133.5, "MD88", 2500, 175));
-        
-        commList.add(new CommercialFlight(252, "616", "CHA", "LAX", null, 230, 550, 34.0, -133.5, "MD88", 25, 175));
-        commList.add(new CommercialFlight(253, "616", "CHA", "LAX", null, 230, 550, 34.0, -133.5, "MD88", 250, 175));
-        commList.add(new CommercialFlight(253, "616", "CHA", "LAX", null, 230, 550, 34.0, -133.5, "MD88", 2500, 175));
-        commList.add(new CommercialFlight(2504, "616", "CHA", "LAX", null, 230, 550, 34.0, -133.5, "MD88", 25000, 175));
-        commList.add(new CommercialFlight(2505, "616", "CHA", "LAX", null, 230, 550, 34.0, -133.5, "MD88", 257, 175));
-        commList.add(new CommercialFlight(2506, "616", "CHA", "LAX", null, 230, 550, 34.0, -133.5, "MD88", 2, 175));
-        commList.add(new CommercialFlight(2507, "616", "CHA", "LAX", null, 230, 550, 34.0, -133.5, "MD88", 27588, 175));
-        commList.add(new CommercialFlight(2508, "616", "CHA", "LAX", null, 230, 550, 34.0, -133.5, "MD88", 2784, 175));
-        commList.add(new CommercialFlight(2509, "616", "CHA", "LAX", null, 230, 550, 34.0, -133.5, "MD88", 2500, 175));
-        commList.add(new CommercialFlight(25010, "616", "CHA", "LAX", null, 230, 550, 34.0, -133.5, "MD88", 300, 175));
-        commList.add(new CommercialFlight(25011, "616", "CHA", "LAX", null, 230, 550, 34.0, -133.5, "MD88", 165, 175));
-        commList.add(new CommercialFlight(25012, "616", "CHA", "LAX", null, 230, 550, 34.0, -133.5, "MD88", 150, 175));
-        commList.add(new CommercialFlight(25013, "616", "CHA", "LAX", null, 230, 550, 34.0, -133.5, "MD88", 156, 175));
 
 
-    CommercialFlight newFlight = new CommercialFlight(-100, "Hold my Beer", "CHI", "CHA", null, 230, 555, 34.8, -133.5, "747", 250000, 190);
+    CommercialFlight newFlight = new CommercialFlight(250, 250, "AA123", "ATL", "KCHA", 52, 450, 35.66, -85, "737", 35000, 90, 30000);
 
         
         
@@ -82,7 +83,7 @@ public class ArrayListAviation {
         Iterator it = commList.iterator();
         while(it.hasNext()){
             CommercialFlight checker = (CommercialFlight)it.next();
-            if(checker.getAircraftID() == 15){
+            if(checker.getAircraftID() == 11){
                 System.out.println(checker.toString());
                 checker.changeCourse(270);
                 System.out.println(checker.toString());
